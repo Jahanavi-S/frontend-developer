@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #FFB6C1;
+        }
+
+        .profile-card {
+            background: #FFFACD;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 50px;
+            width: 500px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .profile-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .profile-card img {
+            width: 100px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #007BFF;
+        }
+
+        .profile-card h2 {
+            margin: 10px 0 5px;
+            font-size: 24px;
+        }
+
+        .profile-card p {
+            margin: 5px 0;
+            color: #555;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            color: #007BFF;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-card">
+        <img src="https://png.pngtree.com/png-clipart/20230811/original/pngtree-female-profile-job-girl-vector-picture-image_10398968.png" alt="Profile Picture">
+        <h2>JAHANAVI</h2>
+        <p>Web Developer</p>
+        <p>"Iâ€™m interested in web development because I enjoy the combination of creativity and technical problem-solving it offers. The ability to design user-friendly websites and applications that are both visually appealing and functional excites me. I am particularly drawn to learning how different technologies, such as HTML, CSS, and JavaScript, work together to create seamless online experiences. As I continue to explore this field, I look forward to improving my skills and contributing to innovative web projects."</p>
+        <div class="social">
+            <a href="#" target="_blank">&#x1F426;</a>
+            <a href="#" target="_blank">&#x1F4F1;</a>
+            <a href="#" target="_blank">&#x1F517;</a>
+        </div>
+    </div>
+</body>
+</html>

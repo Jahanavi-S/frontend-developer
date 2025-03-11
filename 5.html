@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: #E6E6FA;
+            font-family: Arial, sans-serif;
+        }
+        .slider {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .buttons {
+            margin-top: 10px;
+        }
+        button {
+            background: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 8px 12px;
+            margin: 0 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <img id="sliderImage" src="https://via.placeholder.com/300x200" alt="Image Slider">
+        <div class="buttons">
+            <button onclick="prevImage()">Previous</button>
+            <button onclick="nextImage()">Next</button>
+        </div>
+    </div>
+
+    <script>
+        const images = [
+            'https://png.pngtree.com/png-clipart/20230811/original/pngtree-female-profile-job-girl-vector-picture-image_10398968.png',
+            'https://png.pngtree.com/png-clipart/20230811/original/pngtree-man-user-positive-profile-vector-picture-image_10400386.png',
+            'https://png.pngtree.com/png-vector/20241205/ourmid/pngtree-flat-user-profile-girl-avatar-vector-art-png-image_14644400.png'
+        ];
+
+        let currentIndex = 0;
+
+        function showImage(index) {
+            const sliderImage = document.getElementById('sliderImage');
+            sliderImage.src = images[index];
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage(currentIndex);
+        }
+    </script>
+</body>
+</html>
