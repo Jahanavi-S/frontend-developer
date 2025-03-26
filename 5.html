@@ -11,8 +11,16 @@
             align-items: center;
             min-height: 100vh;
             margin: 0;
-            background: #E6E6FA;
+            background-image: url('https://img.freepik.com/premium-photo/indian-food-background-with-place-text-national-cuisine-india_641503-84399.jpg');
+            background-size: cover;
             font-family: Arial, sans-serif;
+            flex-direction: column; /* Add this to stack the content vertically */
+        }
+        h1 {
+            font-size: 32px;
+            color: #000000;
+            margin: 20px 0;
+            text-align: center; /* This will center the heading */
         }
         .slider {
             display: flex;
@@ -30,7 +38,7 @@
             margin-top: 10px;
         }
         button {
-            background: #007BFF;
+            background: #330099;
             color: #fff;
             border: none;
             padding: 8px 12px;
@@ -44,6 +52,7 @@
     </style>
 </head>
 <body>
+    <h1>Indian Traditional Foods in - Indian States</h1>
     <div class="slider">
         <img id="sliderImage" src="https://via.placeholder.com/300x200" alt="Image Slider">
         <div class="buttons">
@@ -54,9 +63,10 @@
 
     <script>
         const images = [
-            'https://png.pngtree.com/png-clipart/20230811/original/pngtree-female-profile-job-girl-vector-picture-image_10398968.png',
-            'https://png.pngtree.com/png-clipart/20230811/original/pngtree-man-user-positive-profile-vector-picture-image_10400386.png',
-            'https://png.pngtree.com/png-vector/20241205/ourmid/pngtree-flat-user-profile-girl-avatar-vector-art-png-image_14644400.png'
+            'https://blog.swiggy.com/wp-content/uploads/2024/09/Image-No-1-Pootharekulu-1024x538.png',
+            'https://png.pngtree.com/png-clipart/20250103/original/pngtree-makki-ki-roti-sarson-ka-saag-indian-food-png-image_18971997.png',
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQH8gO0qsX2ElMYWSCIWyrtOozSGOqZW86qtLXcKHYK70jgz4Vu_nFX_rqZpmBP-m9ODxg&usqp=CAU',
+            'https://w7.pngwing.com/pngs/977/183/png-transparent-litti-chokha.png',
         ];
 
         let currentIndex = 0;
